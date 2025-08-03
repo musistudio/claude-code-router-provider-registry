@@ -1,0 +1,49 @@
+name: Daily Build and Upload to Cloudflare R2
+
+on:
+  schedule:
+    # Runs at 2 AM UTC every day
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build providers.json
+        run: npm run build
+
+      - name: Verify providers.json exists
+        run: |
+          if [ ! -f providers.json ]; then
+            echo "providers.json file not found!"
+            exit 1
+          fi
+          echo "providers.json file size: $(wc -c < providers.json) bytes"
+
+      - name: Upload to Cloudflare R2
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: $\{{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: $\{{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: r2 object put providers.json --file providers.json --bucket $\{{ secrets.R2_BUCKET_NAME }}
+
+      - name: Upload Success Notification
+        if: success()
+        run: echo "Successfully uploaded providers.json to Cloudflare R2"
+
+      - name: Upload Failure Notification
+        if: failure()
+        run: echo "Failed to upload providers.json to Cloudflare R2"

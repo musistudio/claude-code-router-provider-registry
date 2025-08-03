@@ -1,0 +1,16 @@
+{
+  "name": "claude-code-router-provider-registry",
+  "version": "1.0.0",
+  "description": "Provider registry for Claude Code Router",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "0.12.7"
+  }
+}

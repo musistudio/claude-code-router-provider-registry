@@ -1,0 +1,16 @@
+{
+  "name": "siliconflow",
+  "api_base_url": "https://api.siliconflow.cn/v1/chat/completions",
+  "api_key": "sk-xxx",
+  "models": ["moonshotai/Kimi-K2-Instruct"],
+  "transformer": {
+    "use": [
+      [
+        "maxtoken",
+        {
+          "max_tokens": 16384
+        }
+      ]
+    ]
+  }
+}

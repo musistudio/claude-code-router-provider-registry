@@ -1,0 +1,19 @@
+{
+  "name": "dashscope",
+  "api_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+  "api_key": "",
+  "models": ["qwen3-coder-plus"],
+  "transformer": {
+    "use": [
+      [
+        "maxtoken",
+        {
+          "max_tokens": 65536
+        }
+      ]
+    ],
+    "qwen3-coder-plus": {
+      "use": ["enhancetool"]
+    }
+  }
+}

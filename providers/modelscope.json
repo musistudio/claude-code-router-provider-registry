@@ -1,0 +1,26 @@
+{
+  "name": "modelscope",
+  "api_base_url": "https://api-inference.modelscope.cn/v1/chat/completions",
+  "api_key": "",
+  "models": [
+    "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "ZhipuAI/GLM-4.5"
+  ],
+  "transformer": {
+    "use": [
+      [
+        "maxtoken",
+        {
+          "max_tokens": 65536
+        }
+      ]
+    ],
+    "Qwen/Qwen3-Coder-480B-A35B-Instruct": {
+      "use": ["enhancetool"]
+    },
+    "Qwen/Qwen3-235B-A22B-Thinking-2507": {
+      "use": ["reasoning"]
+    }
+  }
+}

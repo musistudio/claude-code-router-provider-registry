@@ -1,0 +1,9 @@
+{
+  "name": "volcengine",
+  "api_base_url": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+  "api_key": "sk-xxx",
+  "models": ["deepseek-v3-250324", "deepseek-r1-250528"],
+  "transformer": {
+    "use": ["deepseek"]
+  }
+}
