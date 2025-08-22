@@ -1,0 +1,31 @@
+{
+  "name": "burncloud",
+  "api_base_url": "https://ai.burncloud.com/v1/chat/completions",
+  "api_key": "",
+  "models": [
+    "claude-sonnet-4-20250514",
+    "claude-3-7-sonnet-20250219",
+    "claude-opus-4-1-20250805",
+    "claude-3-5-sonnet-20241022",
+    "claude-opus-4-20250514",
+    "gpt-4.1",
+    "gpt-image-1",
+    "gpt-4o",
+    "gpt-5",
+    "gpt-4o-mini",
+    "gpt-4.1-mini",
+    "chatgpt-4o-latest",
+    "gpt-4o-2024-11-20",
+    "gpt-5-chat-latest",
+    "text-embedding-3-large",
+    "gemini-2.5-pro",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-nothink",
+    "gemini-2.5-pro-search",
+    "gemini-2.5-pro-preview-05-06",
+    "gemini-2.5-pro-preview-06-05",
+    "o3",
+    "o3-mini",
+    "DeepSeek-V3"
+  ]
+}
