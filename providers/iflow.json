@@ -1,0 +1,27 @@
+{
+  "name": "modelscope",
+  "api_base_url": "https://apis.iflow.cn/v1/chat/completions",
+  "api_key": "",
+  "models": [
+    "kimi-k2",
+    "qwen3-coder",
+    "glm-4.5",
+    "qwen3-235b-a22b-thinking-2507",
+    "deepseek-v3.1"
+  ],
+  "transformer": {
+    "qwen3-coder": {
+      "use": ["enhancetool"]
+    },
+    "deepseek-v3.1": {
+      "use": [
+        [
+          "maxtoken",
+          {
+            "max_tokens": 8192
+          }
+        ]
+      ]
+    }
+  }
+}
