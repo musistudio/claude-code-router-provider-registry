@@ -1,5 +1,5 @@
 {
-  "name": "modelscope",
+  "name": "iflow",
   "api_base_url": "https://apis.iflow.cn/v1/chat/completions",
   "api_key": "",
   "models": [
