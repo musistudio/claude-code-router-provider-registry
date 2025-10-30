@@ -11,9 +11,6 @@
           "max_tokens": 65536
         }
       ]
-    ],
-    "qwen3-coder-plus": {
-      "use": ["enhancetool"]
-    }
+    ]
   }
 }

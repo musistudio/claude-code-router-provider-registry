@@ -1,0 +1,14 @@
+{
+  "name": "智谱 Coding Plan",
+  "api_base_url": "https://open.bigmodel.cn/api/anthropic/v1/messages",
+  "api_key": "",
+  "models": [
+    "glm-4.6",
+    "glm-4.5-air"
+  ],
+  "transformer": {
+    "use": [
+      "Anthropic"
+    ]
+  }
+}

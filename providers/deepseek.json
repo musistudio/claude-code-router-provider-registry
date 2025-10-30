@@ -4,9 +4,6 @@
   "api_key": "",
   "models": ["deepseek-chat", "deepseek-reasoner"],
   "transformer": {
-    "use": ["deepseek"],
-    "deepseek-chat": {
-      "use": ["tooluse"]
-    }
+    "use": ["deepseek"]
   }
 }
